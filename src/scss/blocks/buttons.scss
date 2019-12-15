@@ -1,0 +1,97 @@
+.button {
+  min-width: 200px;
+  height: 64px;
+  padding: 0 30px;
+
+  background-color: $black;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance:none;
+
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: $white;
+  &:hover {
+    background-color: lighten($black, 5%);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// button clear
+ 
+.button-clear {
+  height: 64px;
+  font-size: 14px;
+  color: $black;
+  -webkit-appearance: none;
+  border: none;
+  &:active {
+    background-color: $background-grey;
+  }
+}
+
+.button--mobile {
+  -webkit-appearance:none;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  background: white;
+}
+
+
+// hamburger
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 25px;
+  -webkit-appearance:none;
+  border: none;
+  background: none;
+}
+
+.hamburger__line {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  background-color: $black;
+  margin: auto 0;
+}
+
+.hamburger__line::before,
+.hamburger__line::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: $black;
+}
+
+.hamburger__line::before {
+  top: 8px;
+  left: 0;
+}
+
+.hamburger__line::after {
+  bottom: 8px;
+  left: 0;
+}
+
+// cart button remove
+
+.remove {
+  display: block;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance:none;
+  border: none;
+  background: none;
+  background-image: url("../img/icons/close-button.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center;
+}

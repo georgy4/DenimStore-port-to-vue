@@ -1,0 +1,45 @@
+.cart-wraper.section.last-section
+  ul(aria-label="Products in cart").cart-content
+    <product-item-in-cart @update-total-price="getTotalPrice(index)" ref="product" v-for="(item, index) in products" :itemname="item.itemName" :key="item.itemId" :itempage="item.itemPage" :itemimg="item.itemImg" :itemprice="item.ItemPrice" :sizes="item.sizes" :itemsleft="item.itemsLeft"></product-item-in-cart>
+    //- li.cart-content__item
+      a(href="product.html")
+        img.cart-content__img(src="img/2.jpg", alt="")
+      .cart-content__product-info
+        p.cart-content__price $ 125
+        a(href="product.html")
+          p.cart-content__product-name Комбинезон
+        .cart-content-bottom
+          .cart-content__product-color 
+            p Color:
+            .cart-content__colors-item.colors-list__item.colors-list__item--active
+
+          p.cart-content__product-size
+            label(for="size") Size:
+            select(name="size" id="size")
+              option XS
+              option S
+              option M
+              option L
+              option XL
+              option XXL
+
+          p.product-quantity
+            label(for="quantity") Quantity:
+            select(name="quantity" id="quantity")
+              option 1
+              option 2
+              option 3
+              option 4
+      button.remove
+
+  aside.summary
+    h2.summary__title Total
+    p.summary__delivery Delivery:
+      span(v-if="premium").delivery-info Free shipping
+      span(v-else).delivery-info $ {{delivery}}
+
+    p.summary__total-price Sub-total: 
+      span.price $ {{ totalPrice }}
+    button.button.summary__button Checkout
+    .summary__payments-accept We accept:
+      img.summary__payments-img(src="img/visa.png", alt="")

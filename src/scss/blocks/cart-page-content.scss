@@ -1,0 +1,160 @@
+.cart-wraper {
+  display: flex;
+  width: 100%;
+}
+
+.cart-content {
+  flex-grow: 1;
+  margin-right: 40px;
+  background: white;
+}
+
+
+.cart-content__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid $grey;
+}
+
+.cart-content__product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-content-bottom {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid $grey;
+}
+
+.cart-content__img {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.cart-content__price {
+  font-weight: 900;
+  font-size: 22px;
+  color: $black;
+}
+
+.cart-content__product-name {
+  font-size: 18px;
+  color: $black;
+}
+
+.cart-content__item:hover {
+  .cart-content__product-name {
+    text-decoration: underline;
+  }
+}
+
+.cart-content__product-color  {
+  display: flex;
+  align-items: center;
+}
+
+.cart-content__product-size {
+  font-size: 18px;
+  color: $black;
+}
+
+select {
+  padding: 0 20px;
+  margin-right: 15px;
+  appearance: none;
+  border: 1px solid $grey;
+  border-radius: 0;
+  background: none;
+}
+
+.cart-content__colors-item {
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+// summary style
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  height: 300px;
+  padding: 25px;
+  border: 2px solid $black;
+  background: white;
+}
+
+.summary__title {
+  font-weight: bold;
+  font-size: 32px;
+  color: $black;
+  border-bottom: 1px solid $grey;
+}
+
+.summary__total-price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+  color: $black;
+}
+
+.summary__delivery {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  font-size: 18px;
+  color: $black;
+}
+
+.summary__payments-accept {
+  font-weight: bold;
+  font-size: 20px;
+  color: $black;
+}
+
+.summary__payments-img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 1366px) {
+}
+
+@media (max-width: 767px) {
+  .cart-wraper {
+    display: block;
+  }
+  .cart-content {
+    width: 100%;
+    margin-right: 0;
+  }
+  .summary {
+    width: 100%;
+    margin-top: 40px;
+    border: none;
+  }
+  .summary__payments-img {
+    width: 200px;
+  }
+  .cart-content-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cart-content__product-size {
+    margin: 5px 0;
+  }
+}

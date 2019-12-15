@@ -1,0 +1,17 @@
+extends ../layouts/layout
+
+block variables
+  -var title = 'Cart'
+block content
+  include ../includes/header-top.pug
+  main.page-main
+    #cart-app
+      .container
+        include ../includes/cart-page-content.pug
+  include ../includes/footer.pug
+block scripts
+  script(src="js/sidemenu.js")
+  script(src="js/components/cart-item-component.js")
+  script(src="js/cart-page.js")
+
+

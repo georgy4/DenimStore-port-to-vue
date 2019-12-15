@@ -1,0 +1,81 @@
+.season-offer {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
+.season-offer__img {
+  width: 60%;
+  height: auto;
+}
+
+.season-offer__right {
+  width: 40%;
+
+  display: flex;
+  background: url("/img/icons/to_left.svg") no-repeat center;
+  background-size: cover;
+}
+
+.season-offer__inner {
+  padding-left: 15%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 7% 0;
+  background-color: $background-grey;
+}
+
+.season-offer__description {
+
+}
+
+.season-offer__title {
+  margin: 17px 0 47px 0;
+}
+
+@media (max-width: 1366px) {
+  .season-offer__img {
+    width: 50%;
+  }
+  .season-offer__right {
+    width: 50%;
+  }  
+  .season-offer__inner {
+    margin: 5% 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .season-offer__title {
+    margin: 15px 0 25px 0;
+  }  
+}
+
+@media (max-width: 767px) {
+  .season-offer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .season-offer__img {
+    width: 100%;
+  }
+  .season-offer__right {
+    width: 100%;
+    align-items: center;
+  }  
+  .season-offer__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    margin: 15px 15px 0 15px;
+    background-color: $background-grey;
+  }  
+  .season-offer__title {
+    margin: 17px 0 40px 0;
+  }  
+}

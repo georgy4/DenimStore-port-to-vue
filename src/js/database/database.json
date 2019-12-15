@@ -1,0 +1,11 @@
+[
+  {
+    "itemId": 123001,
+    "itemName": "Overall",
+    "itemImg": "img/2.jpg",
+    "itemPage": "product.html",
+    "ItemPrice": 120,
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "itemsLeft": 8
+  }
+]

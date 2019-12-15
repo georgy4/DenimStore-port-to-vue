@@ -1,0 +1,34 @@
+section.product-card
+  .gallery
+    .gallery__arrow-left(tabindex=0, aria-label="previous image")
+    .gallery__main-inner
+      img.gallery__main-img(src="img/products/prod5.png", alt="")
+      ul.gallery__thumbnails
+        li.gallery__thumbnail
+          img.gallery__thumbnail-img(src="img/products/prod2.png", alt="")
+        li.gallery__thumbnail
+          img.gallery__thumbnail-img(src="img/products/prod3.png", alt="")
+        li.gallery__thumbnail
+          img.gallery__thumbnail-img(src="img/products/prod4.png", alt="")
+        li.gallery__thumbnail
+          img.gallery__thumbnail-img(src="img/products/prod1.png", alt="")
+    .gallery__arow-right(tabindex=0, aria-label="next image")
+  .product-info
+    p.short-title Overalls
+    p.product-info__description.description Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front pockets and back pockets.
+    .product-info__color
+      p.product-info__option-title Color
+      ul.colors-list.product-info__colors-list
+        li(tabindex=0).product-info__colors-list-item.colors-list__item.colors-list__item--active
+        li(tabindex=0).product-info__colors-list-item.colors-list__item
+        li(tabindex=0).product-info__colors-list-item.colors-list__item
+    .product-info__size
+      h2.product-info__option-title Size
+      ul.sizes-list.product-info__sizes-list
+        li.sizes-list__item XS
+        li.sizes-list__item.sizes-list__item--active S
+        li.sizes-list__item M
+        li.sizes-list__item L
+        li.sizes-list__item XL
+    p.product-info__price $ 160
+    button.button.product-info__add-to-cart Add to cart

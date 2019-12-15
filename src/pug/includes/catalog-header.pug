@@ -1,0 +1,26 @@
+header.catalog-header.header
+  include ../includes/header-top.pug 
+  .header-bottom--catalog
+    .container
+      .header-bottom__inner--no-padding
+        .header-bottom__left
+
+          .breadcrumb-wrapper.header-bottom__breadcrumb
+            ul.breadcrumb-list
+              li.breadcrumb-list__item 
+                a(href="index.html").breadcrumb-list__anchor All categories  
+              li.breadcrumb-list__item  
+                a(href="#").breadcrumb-list__anchor Woman
+              li.breadcrumb-list__item--active Jackets
+          h1.short-title Denim Collection Fall 2019
+        .img-container.header-bottom__img-container
+          img.img-container__top-img--no-bulge(src="img/icons/to_right.svg", alt="")
+          img.img-container__bottom-img--no-bulge(src="img/icons/to_left.svg", alt="")
+          img.img-container__main-img(src="img/catalog-header.jpg", width=299 height=260 alt="collection cover")
+      .breadcrumb-wrapper.breadcrumb-wrapper--mobile
+        ul.breadcrumb-list
+          li.breadcrumb-list__item 
+            a(href="index.html").breadcrumb-list__anchor All categories  
+          li.breadcrumb-list__item  
+            a(href="#").breadcrumb-list__anchor Woman
+          li.breadcrumb-list__item--active Jackets

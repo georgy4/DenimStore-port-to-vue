@@ -1,0 +1,21 @@
+.search-wrapper
+  input(type="search", name="Search field" placeholder="Search..").input-search.header-bottom__input-search
+.header-top
+  .container
+    nav.header-top-navigation
+      button.hamburger.header-top-navigation__hamburger
+        .hamburger__line
+      .modal
+      ul(aria-label="navigation").header-top-navigation__list.header-top-navigation__list--hidden
+        li.header-top-navigation__list-item
+          a.header-top-navigation__anchor(href="catalog.html") Woman
+        li.header-top-navigation__list-item
+          a.header-top-navigation__anchor(href="catalog.html") Man
+        li.header-top-navigation__list-item
+          a.header-top-navigation__anchor(href="catalog.html") New
+      a(href="").logo.logo--black.header-top-navigation__logo Nîmes
+      .header-top-navigation__right
+        button(type="button" aria-label="search" 
+        onclick="document.querySelector('.input-search').focus()").search.header-top-navigation__search
+        a(href="cart.html").cart__anchor
+          button(type="button" aria-label="cart").cart.header-top-navigation__cart

@@ -1,0 +1,16 @@
+extends ../layouts/layout.pug 
+
+block variables
+  -var title = 'Product page'
+
+block content
+  header.header
+    include ../includes/header-top.pug 
+  main.page-main
+    .container
+      include ../includes/product-card-section.pug 
+      include ../includes/recommendations-section.pug         
+
+  include ../includes/footer.pug
+block scripts
+  script(src="js/sidemenu.js")

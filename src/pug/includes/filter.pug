@@ -1,0 +1,57 @@
+.filter-modal
+.filter-wrapper
+  .filter
+    //- mobile and other filter head
+    .filter__head
+      button(tabindex=-1).filter__button--no-bg.filter__button-top
+        h3.filter__button-text  Filter by
+        .filter__button-angle
+    //- mobile filter head when filter is open
+    .filter__head--mobile.dn
+      button.button--mobile Clear all
+      h1.short-title Filters
+      button.button--mobile.button-close-filter Close
+
+    ul.filter__list.filter__list--hidden 
+      li.filter__item 
+        button(
+          onclick="event.currentTarget.closest('.filter__item').querySelector('.filter__item-inner').classList.toggle('filter__item-inner--hidden');").filter__button--no-bg  
+          p.filter__button-text Price
+          .filter__button-angle
+
+        //- nouislider plugin
+        .filter__item-inner.filter__slider.filter__item-inner--hidden
+          #slider-tooltips
+
+      li.filter__item
+        button(
+          onclick="event.currentTarget.closest('.filter__item').querySelector('.filter__item-inner').classList.toggle('filter__item-inner--hidden');").filter__button--no-bg
+          p.filter__button-text  Color
+          .filter__button-angle
+        .filter__item-inner.filter__item-inner--hidden
+          ul.colors-list.filter__colors
+            li(tabindex=0).colors-list__item.colors-list__item--active
+            li(tabindex=0).colors-list__item
+            li(tabindex=0).colors-list__item
+            li(tabindex=0).colors-list__item
+            li(tabindex=0).colors-list__item
+            li(tabindex=0).colors-list__item
+      li.filter__item 
+        button(
+          onclick="event.currentTarget.closest('.filter__item').querySelector('.filter__item-inner').classList.toggle('filter__item-inner--hidden');").filter__button--no-bg  
+          p.filter__button-text  Collection
+          .filter__button-angle
+        .filter__item-inner.filter__item-inner--hidden
+          ul.collection-style.filter__collection-style
+            li.collection-style__item
+              a.collection-style__anchor(href="") Casual
+            li.collection-style__item
+              a.collection-style__anchor(href="") Petite
+            li.collection-style__item
+              //- active item
+              a.collection-style__anchor.collection-style__anchor--active(href="") Classic
+            li.collection-style__item
+              a.collection-style__anchor(href="") Soulluxe
+
+      button.button.filter__button-apply Apply(9 Products)
+      button.filter__button-clear.button-clear Clear all

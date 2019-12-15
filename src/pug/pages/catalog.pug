@@ -1,0 +1,18 @@
+extends ../layouts/layout
+
+block variables
+  -var title = 'Catalog'
+block content
+  include ../includes/catalog-header.pug
+  main.page-main
+    .container
+      include ../includes/filter.pug
+      include ../includes/products.pug
+      include ../includes/load-more.pug
+
+  include ../includes/footer.pug
+block scripts
+  script(src="js/nouislider.js")
+  script(src="js/slider.js")
+  script(src="js/filter.js")
+  script(src="js/sidemenu.js")

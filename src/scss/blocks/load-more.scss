@@ -1,0 +1,31 @@
+.load-more-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.load-status__bar-wraper {
+  position: relative;
+  width: 200px;
+  margin: 10px 0 40px 0;
+}
+
+.load-status__full-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $background-grey;
+}
+
+.load-status__current-bar {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 20%;
+  height: 2px;
+  background-color: $black;
+}
+

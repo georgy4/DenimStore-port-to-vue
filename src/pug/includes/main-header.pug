@@ -1,0 +1,43 @@
+header.main-header.header
+  //- .search-wrapper
+  //-   input(type="search", name="Search field" placeholder="Search.." ref="searchInput").input-search.header-bottom__input-search
+  <search-component ref="searchComponent"></search-component>
+  .header-top
+    a(href="").logo.main-header__logo.logo--black Nîmes
+  .header-bottom
+    .container
+      .header-bottom__inner
+
+        nav.header-bottom__nav.header-navigation
+          ul.header-navigation__list
+            li.header-navigation__list-item
+              a.header-navigation__anchor(href="catalog.html") Woman
+            li.header-navigation__list-item
+              a.header-navigation__anchor(href="catalog.html") Man
+            li.header-navigation__list-item
+              a.header-navigation__anchor(href="catalog.html") New
+
+          .header-navigation__right
+            button(type="button" aria-label="search" 
+            @click="focusSearch").search.header-navigation__search
+            a(href="cart.html").cart__anchor
+              button(type="button" aria-label="cart").cart.header-navigation__cart
+
+          button(type="button" aria-label="to bottom" @click="toBottom").header-navigation__to-bottom.to-bottom
+
+          ul.header-navigation__socials
+            li.header-navigation__social-item
+              a.header-navigation__social-link(href="") facebook
+            li.header-navigation__social-item
+              a.header-navigation__social-link(href="") instagram
+
+        .base-info
+          p.short-description.base-info__tagline The quality you deserve
+          p.base-info__collection-name DENIM
+          button(type="button").button.base-info__button Check new collection
+
+        .img-container.header-bottom__img-container
+          img.img-container__top-img(src="img/icons/to_right.svg", alt="")
+          img.img-container__bottom-img(src="img/icons/to_left.svg", alt="")
+          img.img-container__main-img(src="img/matheus-ferrero-G1T-uv4n31U-unsplash.jpg", width=430 height=517 alt="collection cover")
+          
