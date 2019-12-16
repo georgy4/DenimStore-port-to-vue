@@ -94,4 +94,7 @@
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center;
+  &:hover {
+    transform: scale(1.05)
+  }
 }

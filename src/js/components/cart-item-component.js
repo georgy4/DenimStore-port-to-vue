@@ -8,7 +8,7 @@ let cartItemComponent = {
     itemsleft: Number
   },
   template: `
-    <li class="cart-content__item">
+    <li class="cart-content__item" ref="product">
       <a :href="itempage">
         <img :src="itemimg" alt="" class="cart-content__img">
       </a> 
@@ -31,13 +31,13 @@ let cartItemComponent = {
           </p> 
           <p class="product-quantity">
             <label for="quantity">Quantity:</label> 
-            <select name="quantity" id="quantity" v-model="itemsAmount" @click="updateTotalPrice">
+            <select name="quantity" id="quantity" v-model="itemsAmount" @click="$emit('update-total-price')">
               <option v-for="item in itemsleft"> {{ item }}</option> 
             </select>
           </p>
         </div>
       </div> 
-      <button class="remove"></button>
+      <button class="remove" @click="deleteItem"></button>
     </li>
     `,
   data() {
@@ -46,8 +46,9 @@ let cartItemComponent = {
     }
   },
   methods: {
-    updateTotalPrice() {
-      this.$emit('update-total-price')
+    deleteItem() {
+      this.$refs.product.style.animation = 'hide 0.2s';
+      this.$emit('delete-item') 
     }
   }
 }

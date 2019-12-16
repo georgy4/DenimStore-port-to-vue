@@ -7,6 +7,7 @@ new Vue ({
     totalPrice: 0,
     premium: false,
     delivery: 5,
+    // датабэйс с товарами, так сказать. Элементы массива удаляются по нажатии на "удалить" 
     products: [
       {
         itemId: 123001,
@@ -30,13 +31,22 @@ new Vue ({
   },
   methods: {
     // Вызывается из компонента каждый раз когда изменяется количество товара в компоненте
-    getTotalPrice(index) {
+    getTotalPrice() {
       this.totalPrice = 0
       for (let i = 0; i < this.products.length; i++) {
         this.totalPrice += this.$refs.product[i].itemsAmount*
         this.products[i].ItemPrice
       }
-      this.totalPrice += this.delivery
+      if (this.products.length >= 1) {
+        this.totalPrice += this.delivery
+      }
+    },
+    // вызывается из кмпонента при нажатии удалить
+    deleteProduct(index) {
+      setTimeout(() => {
+        this.products.splice(index, 1)
+        this.getTotalPrice()  
+      }, 200);
     }
   },
   mounted() {
