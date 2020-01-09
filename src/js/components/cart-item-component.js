@@ -31,8 +31,8 @@ let cartItemComponent = {
           </p> 
           <p class="product-quantity">
             <label for="quantity">Quantity:</label> 
-            <select name="quantity" id="quantity" v-model="itemsAmount" @click="$emit('update-total-price')">
-              <option v-for="item in itemsleft"> {{ item }}</option> 
+            <select name="quantity" id="quantity" v-model="itemsAmount">
+              <option v-for="itemQuantity in itemsleft"> {{ itemQuantity }}</option> 
             </select>
           </p>
         </div>
@@ -49,6 +49,11 @@ let cartItemComponent = {
     deleteItem() {
       this.$refs.product.style.animation = 'hide 0.2s';
       this.$emit('delete-item') 
+    }
+  },
+  watch: {
+    itemsAmount: function() {
+      this.$emit('update-total-price')
     }
   }
 }
