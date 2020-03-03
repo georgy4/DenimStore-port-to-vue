@@ -16,7 +16,8 @@ new Vue ({
         itemPage: 'product.html',
         ItemPrice: 120,
         sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-        itemsLeft: 8
+        itemsLeft: 8,
+        itemsAmount: 1
       },
       {
         itemId: 123002,
@@ -25,16 +26,21 @@ new Vue ({
         itemPage: 'product.html',
         ItemPrice: 140,
         sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-        itemsLeft: 5
-        }
+        itemsLeft: 5,
+        itemsAmount: 1
+      }
     ]
   },
   methods: {
-    // Вызывается из компонента каждый раз когда изменяется количество товара в компоненте
+     // Вызывается из компонента каждый раз когда изменяется количество товара в компоненте
+    setItemsAmount(index) {
+      this.products[index].itemsAmount = this.$refs.product[index].itemsAmount
+      this.getTotalPrice()
+    },
     getTotalPrice() {
       this.totalPrice = 0
       for (let i = 0; i < this.products.length; i++) {
-        this.totalPrice += this.$refs.product[i].itemsAmount*
+        this.totalPrice += this.products[i].itemsAmount*
         this.products[i].ItemPrice
       }
       if (this.products.length >= 1) {
@@ -52,7 +58,7 @@ new Vue ({
   mounted() {
     // первичный рассчет общей стоимости всех товаров в корзине
     for (let i = 0; i < this.products.length; i++) {
-      this.totalPrice += this.products[i].ItemPrice * this.$refs.product[i].itemsAmount
+      this.totalPrice += this.products[i].ItemPrice * this.products[i].itemsAmount
     }
     this.totalPrice += this.delivery
   }

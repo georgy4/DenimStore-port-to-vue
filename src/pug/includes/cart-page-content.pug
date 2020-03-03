@@ -1,6 +1,6 @@
 .cart-wraper.section.last-section
   ul(aria-label="Products in cart").cart-content
-    <product-item-in-cart @delete-item="deleteProduct(index)" @update-total-price="getTotalPrice(index)" ref="product" v-for="(item, index) in products" :itemname="item.itemName" :key="item.itemId" :itempage="item.itemPage" :itemimg="item.itemImg" :itemprice="item.ItemPrice" :sizes="item.sizes" :itemsleft="item.itemsLeft"></product-item-in-cart>
+    <product-item-in-cart @delete-item="deleteProduct(index)" @update-total-price="setItemsAmount(index)" ref="product" v-for="(item, index) in products" :itemname="item.itemName" :key="item.itemId" :itempage="item.itemPage" :itemimg="item.itemImg" :itemprice="item.ItemPrice" :sizes="item.sizes" :itemsleft="item.itemsLeft"></product-item-in-cart>
     //- li.cart-content__item
       a(href="product.html")
         img.cart-content__img(src="img/2.jpg", alt="")

@@ -19,6 +19,7 @@
   background: url("../img/icons/arrowleft.svg") no-repeat;
   background-position: center left;
   background-size: 10px 21px;
+  outline: none;
   &:hover {
     transform: scale(1.1);
   }
@@ -31,6 +32,7 @@
   background: url("../img/icons/arrowright.svg") no-repeat;
   background-position: center right;
   background-size: 10px 21px;
+  outline: none;
   &:hover {
     transform: scale(1.1);
   }

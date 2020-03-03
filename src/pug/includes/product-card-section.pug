@@ -1,18 +1,15 @@
 section.product-card
-  .gallery
-    .gallery__arrow-left(tabindex=0, aria-label="previous image")
-    .gallery__main-inner
-      img.gallery__main-img(src="img/products/prod5.png", alt="")
-      ul.gallery__thumbnails
-        li.gallery__thumbnail
-          img.gallery__thumbnail-img(src="img/products/prod2.png", alt="")
-        li.gallery__thumbnail
-          img.gallery__thumbnail-img(src="img/products/prod3.png", alt="")
-        li.gallery__thumbnail
-          img.gallery__thumbnail-img(src="img/products/prod4.png", alt="")
-        li.gallery__thumbnail
-          img.gallery__thumbnail-img(src="img/products/prod1.png", alt="")
-    .gallery__arow-right(tabindex=0, aria-label="next image")
+
+  #gallery-app
+    .gallery
+      .gallery__arrow-left(tabindex=0, aria-label="previous image" @click="showPrevImg")
+      .gallery__main-inner
+        img.gallery__main-img(:src="productPicture.src", alt="")
+        ul.gallery__thumbnails
+          li.gallery__thumbnail(v-for="(thumbnail, index) in thumbnailsSrc" @mouseover="updateImage(index)")
+            img.gallery__thumbnail-img(:src="thumbnail" alt="")
+      .gallery__arow-right(tabindex=0, aria-label="next image" @click="showNextImg")
+
   .product-info
     p.short-title Overalls
     p.product-info__description.description Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front pockets and back pockets.
